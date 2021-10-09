@@ -9,4 +9,6 @@ two spaces
 and text on next line between stuff
 gives new line
 
-Hope this mismatch gets fixed
+for italics use two asterisks between texts  
+for bold text use two underscores  
+to know more just google them i guess
