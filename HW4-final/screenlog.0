@@ -1,0 +1,1146 @@
+ktanvir27@aurora-rviz02:~\[tanvir27@aurora-rviz02 ~]$ cat hom[K[K[K[K[K[K[Kpluma homework4-slurm.sh &
+[1] 8433
+ktanvir27@aurora-rviz02:~\[tanvir27@aurora-rviz02 ~]$ l[Kcp homework4-slurm.sh ~/Homework4/homework4-sli[Kurm.sh M[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kh
+ktanvir27@aurora-rviz02:~\[tanvir27@aurora-rviz02 ~]$ cd ~/Homework4
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls
+homework4-slurm.sh  slurm-6058928.out  [0m[38;5;34mTanvirhomework4.sh[0m
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ re[Km slurm-6058928.out
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls
+homework4-slurm.sh  [0m[38;5;34mTanvirhomework4.sh[0m
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061865
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061866
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+^[[ASubmitted batch job 6061867
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061868
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061869
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls
+homework4-slurm.sh  slurm-6061866.out  slurm-6061868.out  [0m[38;5;34mTanvirhomework4.sh[0m
+slurm-6061865.out   slurm-6061867.out  slurm-6061869.out
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ lssbatch homework4-slurm.sh
+Submitted batch job 6061870
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061871
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls
+homework4-slurm.sh  slurm-6061866.out  slurm-6061868.out  slurm-6061870.out
+slurm-6061865.out   slurm-6061867.out  slurm-6061869.out  [0m[38;5;34mTanvirhomework4.sh[0m
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ squeue -u tanvir27
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6061871        lu      hw4 tanvir27  R       0:19      1 au001
+           6061870        lu      hw4 tanvir27  R       0:22      1 au001
+           6061869        lu      hw4 tanvir27  R       0:36      1 au001
+           6061868        lu      hw4 tanvir27  R       0:41      1 au001
+           6061867        lu      hw4 tanvir27  R       0:47      1 au001
+           6061866        lu      hw4 tanvir27  R       0:52      1 au001
+           6061865        lu      hw4 tanvir27  R       0:56      1 au001
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ scontrol show job ^C
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ squeue -u tanvir27[Kscontrol show job ^V[2Pqueue -u tanvir27
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6061871        lu      hw4 tanvir27  R       1:26      1 au001
+           6061870        lu      hw4 tanvir27  R       1:29      1 au001
+           6061869        lu      hw4 tanvir27  R       1:43      1 au001
+           6061868        lu      hw4 tanvir27  R       1:48      1 au001
+           6061867        lu      hw4 tanvir27  R       1:54      1 au001
+           6061866        lu      hw4 tanvir27  R       1:59      1 au001
+           6061865        lu      hw4 tanvir27  R       2:03      1 au001
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ SCON[K[K[K[Kscontrol show job 6061871 6061870 6061869
+too many arguments for keyword:show
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ scontrol show job 6061871 6061870 6061869[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+JobId=6061871 JobName=hw4
+   UserId=tanvir27(47802) GroupId=mnxb01(47800) MCS_label=N/A
+   Priority=65920 Nice=0 Account=lu2021-7-19 QOS=normal
+   JobState=COMPLETED Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:02:01 TimeLimit=00:03:00 TimeMin=N/A
+   SubmitTime=2021-10-06T10:21:51 EligibleTime=2021-10-06T10:21:51
+   AccrueTime=2021-10-06T10:21:51
+   StartTime=2021-10-06T10:21:53 EndTime=2021-10-06T10:23:54 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-10-06T10:21:53
+   Partition=lu AllocNode:Sid=aurora-rviz02:7574
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=au001
+   BatchHost=au001
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,mem=3100M,node=1,billing=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=3100M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/tanvir27/Homework4/homework4-slurm.sh
+   WorkDir=/home/tanvir27/Homework4
+   StdErr=/home/tanvir27/Homework4/slurm-6061871.out
+   StdIn=/dev/null
+   StdOut=/home/tanvir27/Homework4/slurm-6061871.out
+   Power=
+   NtasksPerTRES:0
+
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ scontrol show job 6061871 | more
+JobId=6061871 JobName=hw4
+   UserId=tanvir27(47802) GroupId=mnxb01(47800) MCS_label=N/A
+   Priority=65920 Nice=0 Account=lu2021-7-19 QOS=normal
+   JobState=COMPLETED Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:02:01 TimeLimit=00:03:00 TimeMin=N/A
+   SubmitTime=2021-10-06T10:21:51 EligibleTime=2021-10-06T10:21:51
+   AccrueTime=2021-10-06T10:21:51
+   StartTime=2021-10-06T10:21:53 EndTime=2021-10-06T10:23:54 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-10-06T10:21:53
+   Partition=lu AllocNode:Sid=aurora-rviz02:7574
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=au001
+   BatchHost=au001
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,mem=3100M,node=1,billing=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=3100M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/tanvir27/Homework4/homework4-slurm.sh
+   WorkDir=/home/tanvir27/Homework4
+   StdErr=/home/tanvir27/Homework4/slurm-6061871.out
+[3m--More--[23m   StdIn=/dev/null
+[3m--More--[23m   StdOut=/home/tanvir27/Homework4/slurm-6061871.out
+[3m--More--[23m   Power=
+[3m--More--[23m   NtasksPerTRES:0
+[3m--More--[23m[K
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ scontrol show job 6061871 | more[C[1P[1P[1@6[1@9
+JobId=6061869 JobName=hw4
+   UserId=tanvir27(47802) GroupId=mnxb01(47800) MCS_label=N/A
+   Priority=65920 Nice=0 Account=lu2021-7-19 QOS=normal
+   JobState=COMPLETED Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:02:01 TimeLimit=00:03:00 TimeMin=N/A
+   SubmitTime=2021-10-06T10:21:35 EligibleTime=2021-10-06T10:21:35
+   AccrueTime=2021-10-06T10:21:35
+   StartTime=2021-10-06T10:21:36 EndTime=2021-10-06T10:23:37 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-10-06T10:21:36
+   Partition=lu AllocNode:Sid=aurora-rviz02:7574
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=au001
+   BatchHost=au001
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,mem=3100M,node=1,billing=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=3100M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/tanvir27/Homework4/homework4-slurm.sh
+   WorkDir=/home/tanvir27/Homework4
+   StdErr=/home/tanvir27/Homework4/slurm-6061869.out
+[3m--More--[23m   StdIn=/dev/null
+[3m--More--[23m   StdOut=/home/tanvir27/Homework4/slurm-6061869.out
+[3m--More--[23m   Power=
+[3m--More--[23m   NtasksPerTRES:0
+[3m--More--[23m[K
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls
+homework4-slurm.sh  slurm-6061867.out  slurm-6061870.out
+slurm-6061865.out   slurm-6061868.out  slurm-6061871.out
+slurm-6061866.out   slurm-6061869.out  [0m[38;5;34mTanvirhomework4.sh[0m
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ scancel [K[K[K[K[K[K[Kcontrol show job 6061865
+JobId=6061865 JobName=hw4
+   UserId=tanvir27(47802) GroupId=mnxb01(47800) MCS_label=N/A
+   Priority=65920 Nice=0 Account=lu2021-7-19 QOS=normal
+   JobState=COMPLETED Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:02:04 TimeLimit=00:03:00 TimeMin=N/A
+   SubmitTime=2021-10-06T10:21:16 EligibleTime=2021-10-06T10:21:16
+   AccrueTime=2021-10-06T10:21:16
+   StartTime=2021-10-06T10:21:16 EndTime=2021-10-06T10:23:20 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-10-06T10:21:16
+   Partition=lu AllocNode:Sid=aurora-rviz02:7574
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=au001
+   BatchHost=au001
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,mem=3100M,node=1,billing=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=3100M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/home/tanvir27/Homework4/homework4-slurm.sh
+   WorkDir=/home/tanvir27/Homework4
+   StdErr=/home/tanvir27/Homework4/slurm-6061865.out
+   StdIn=/dev/null
+   StdOut=/home/tanvir27/Homework4/slurm-6061865.out
+   Power=
+   NtasksPerTRES:0
+
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ scontrol show job 6061865[Kls
+homework4-slurm.sh  slurm-6061867.out  slurm-6061870.out
+slurm-6061865.out   slurm-6061868.out  slurm-6061871.out
+slurm-6061866.out   slurm-6061869.out  [0m[38;5;34mTanvirhomework4.sh[0m
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ slur[K[K[K[Kcat slurm [K-6061869
+cat: slurm-6061869: No such file or directory
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ cat slurm-6061869.out
+user:
+tanvir27
+current directory:
+/home/tanvir27/Homework4
+hostname:
+au001
+uptime info:
+ 10:21:37 up 13 days, 21:00,  0 users,  load average: 10.11, 10.08, 10.41
+disk space usage:
+20K	.
+No of entries in /etc: 
+310
+No of entries in /usr/bin directories
+1694
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls[K[Ksqueue -u tanvir27
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061903
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061904
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061905
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061906
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061907
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sbatch homework4-slurm.sh
+Submitted batch job 6061908
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls
+homework4-slurm.sh  slurm-6061868.out  slurm-6061903.out  slurm-6061907.out
+slurm-6061865.out   slurm-6061869.out  slurm-6061904.out  slurm-6061908.out
+slurm-6061866.out   slurm-6061870.out  slurm-6061905.out  [0m[38;5;34mTanvirhomework4.sh[0m
+slurm-6061867.out   slurm-6061871.out  slurm-6061906.out
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ squeue -u tanvir 2[K[K[Kr27
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6061908        lu      hw4 tanvir27  R       0:15      1 au001
+           6061907        lu      hw4 tanvir27  R       0:18      1 au001
+           6061905        lu      hw4 tanvir27  R       0:19      1 au001
+           6061906        lu      hw4 tanvir27  R       0:19      1 au001
+           6061904        lu      hw4 tanvir27  R       0:22      1 au001
+           6061903        lu      hw4 tanvir27  R       0:26      1 au001
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ r[Kscancel 6061906 6061908
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ scancel 6061906 6061908[K3[K7
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls
+homework4-slurm.sh  slurm-6061868.out  slurm-6061903.out  slurm-6061907.out
+slurm-6061865.out   slurm-6061869.out  slurm-6061904.out  slurm-6061908.out
+slurm-6061866.out   slurm-6061870.out  slurm-6061905.out  [0m[38;5;34mTanvirhomework4.sh[0m
+slurm-6061867.out   slurm-6061871.out  slurm-6061906.out
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ cat slurn[Km-6061907.out
+user:
+tanvir27
+current directory:
+/home/tanvir27/Homework4
+hostname:
+au001
+uptime info:
+ 10:27:34 up 13 days, 21:06,  0 users,  load average: 10.00, 10.03, 10.29
+disk space usage:
+23K	.
+No of entries in /etc: 
+310
+No of entries in /usr/bin directories
+1694
+slurmstepd: error: *** JOB 6061907 ON au001 CANCELLED AT 2021-10-06T10:28:28 ***
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ cat slurm-6061907.out[1P.out8.out
+user:
+tanvir27
+current directory:
+/home/tanvir27/Homework4
+hostname:
+au001
+uptime info:
+ 10:27:37 up 13 days, 21:06,  0 users,  load average: 10.00, 10.03, 10.29
+disk space usage:
+24K	.
+No of entries in /etc: 
+310
+No of entries in /usr/bin directories
+1694
+slurmstepd: error: *** JOB 6061908 ON au001 CANCELLED AT 2021-10-06T10:28:19 ***
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ cat slurm-6061908.out[1P.out6.out
+user:
+tanvir27
+current directory:
+/home/tanvir27/Homework4
+hostname:
+au001
+uptime info:
+ 10:27:32 up 13 days, 21:06,  0 users,  load average: 10.00, 10.03, 10.29
+disk space usage:
+22K	.
+No of entries in /etc: 
+310
+No of entries in /usr/bin directories
+1694
+slurmstepd: error: *** JOB 6061906 ON au001 CANCELLED AT 2021-10-06T10:28:19 ***
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ cat slurm-6061906.out[1P.out5.out
+user:
+tanvir27
+current directory:
+/home/tanvir27/Homework4
+hostname:
+au001
+uptime info:
+ 10:27:33 up 13 days, 21:06,  0 users,  load average: 10.00, 10.03, 10.29
+disk space usage:
+23K	.
+No of entries in /etc: 
+310
+No of entries in /usr/bin directories
+1694
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ cat slurm-6061905.out[Kls
+homework4-slurm.sh  slurm-6061868.out  slurm-6061903.out  slurm-6061907.out
+slurm-6061865.out   slurm-6061869.out  slurm-6061904.out  slurm-6061908.out
+slurm-6061866.out   slurm-6061870.out  slurm-6061905.out  [0m[38;5;34mTanvirhomework4.sh[0m
+slurm-6061867.out   slurm-6061871.out  slurm-6061906.out
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ squeue -u tanvir27
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6061905        lu      hw4 tanvir27 CG       2:01      1 
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ cat slurm-6061905.out
+user:
+tanvir27
+current directory:
+/home/tanvir27/Homework4
+hostname:
+au001
+uptime info:
+ 10:27:33 up 13 days, 21:06,  0 users,  load average: 10.00, 10.03, 10.29
+disk space usage:
+23K	.
+No of entries in /etc: 
+310
+No of entries in /usr/bin directories
+1694
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ cat slurm-6061905.out[3Psqueue -u tanvir27cat slurm-6061905.out[1P.out[1P.out[1P.out8.out6.out8.out
+user:
+tanvir27
+current directory:
+/home/tanvir27/Homework4
+hostname:
+au001
+uptime info:
+ 10:21:31 up 13 days, 21:00,  0 users,  load average: 10.12, 10.08, 10.41
+disk space usage:
+19K	.
+No of entries in /etc: 
+310
+No of entries in /usr/bin directories
+1694
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ $?
+bash: 0: command not found
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ $?cat slurm-6061868.out$?[K man sinfo
+bash: 127: command not found
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ $? man sinfo[K$? man sinfo[1P[1P[1P
+[?1049h[?1h=sinfo(1)                        Slurm Commands                        sinfo(1)[m
+[m
+[1mNAME[0m[m
+       sinfo - View information about Slurm nodes and partitions.[m
+[m
+[1mSYNOPSIS[0m[m
+       [1msinfo[0m [[4mOPTIONS[24m...][m
+[m
+[1mDESCRIPTION[0m[m
+       [1msinfo[0m  is used to view partition and node information for a system run‐[m
+       ning Slurm.[m
+[m
+[1mOPTIONS[0m[m
+       [1m-a[0m, [1m--all[0m[m
+              Display information about all partitions. This  causes  informa‐[m
+              tion  to  be  displayed  about partitions that are configured as[m
+              hidden and partitions that are unavailable to the user's group.[m
+[m
+       [1m-d[0m, [1m--dead[0m[m
+              If set, only report state information for non-responding  (dead)[m
+              nodes.[m
+[m
+       [1m-e[0m, [1m--exact[0m[m
+[3m Manual page sinfo(1) line 1 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              If  set,  do not group node information on multiple nodes unless[m
+[3m Manual page sinfo(1) line 2 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              their configurations to be reported are identical. Otherwise cpu[m
+[3m Manual page sinfo(1) line 5 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              count, memory size, and disk space for nodes will be listed with[m
+[3m Manual page sinfo(1) line 6 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              the minimum value followed by a "+" for nodes with the same par‐[m
+[3m Manual page sinfo(1) line 7 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              tition and state (e.g. "250+").[m
+[3m Manual page sinfo(1) line 9 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 10 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m--federation[0m[m
+[3m Manual page sinfo(1) line 11 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Show all partitions from the federation if a member of one.[m
+[3m Manual page sinfo(1) line 12 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 13 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m-h[0m, [1m--noheader[0m[m
+[3m Manual page sinfo(1) line 14 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Do not print a header on the output.[m
+[3m Manual page sinfo(1) line 15 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 17 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m--help[0m Print a message describing all [1msinfo[0m options.[m
+[3m Manual page sinfo(1) line 18 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 19 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m--hide[0m Do  not  display information about hidden partitions. Partitions[m
+[3m Manual page sinfo(1) line 20 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              that are configured as hidden or are not available to the user's[m
+[3m Manual page sinfo(1) line 21 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              group will not be displayed. This is the default behavior.[m
+[3m Manual page sinfo(1) line 22 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 24 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m-i[0m [1m<seconds>[0m, [1m--iterate=<seconds>[0m[m
+[3m Manual page sinfo(1) line 25 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Print  the  state  on a periodic basis.  Sleep for the indicated[m
+[3m Manual page sinfo(1) line 26 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              number of seconds between reports.  By  default  prints  a  time[m
+[3m Manual page sinfo(1) line 27 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              stamp with the header.[m
+[3m Manual page sinfo(1) line 29 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 30 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m--local[0m[m
+[3m Manual page sinfo(1) line 31 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Show  only  jobs local to this cluster. Ignore other clusters in[m
+[3m Manual page sinfo(1) line 32 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              this federation (if any). Overrides [1m--federation[0m.[m
+[3m Manual page sinfo(1) line 33 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 34 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m-l[0m, [1m--long[0m[m
+[3m Manual page sinfo(1) line 35 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Print more detailed information.  This is ignored if the  [1m--for‐[0m[m
+[3m Manual page sinfo(1) line 37 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1mmat[0m option is specified.[m
+[3m Manual page sinfo(1) line 38 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 39 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m-M[0m, [1m--clusters[0m=<[4mstring[24m>[m
+[3m Manual page sinfo(1) line 41 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Clusters  to  issue  commands to.  Multiple cluster names may be[m
+[3m Manual page sinfo(1) line 42 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              comma separated.  A value of '[1mall[0m' will query all clusters. Note[m
+[3m Manual page sinfo(1) line 43 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              that  the  [1mSlurmDBD[0m must be up for this option to work properly.[m
+[3m Manual page sinfo(1) line 45 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              This option implicitly sets the [1m--local[0m option.[m
+[3m Manual page sinfo(1) line 46 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 48 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m [1m<nodes>[0m, [1m--nodes=<nodes>[0m[m
+[3m Manual page sinfo(1) line 49 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Print information about the specified node(s).   Multiple  nodes[m
+[3m Manual page sinfo(1) line 50 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              may  be  comma separated or expressed using a node range expres‐[m
+[3m Manual page sinfo(1) line 51 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              sion (e.g. "linux[00-17]") Limiting the query to just the  rele‐[m
+[3m Manual page sinfo(1) line 53 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              vant nodes can measurably improve the performance of the command[m
+[3m Manual page sinfo(1) line 54 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              for large clusters.[m
+[3m Manual page sinfo(1) line 55 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 56 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m--noconvert[0m[m
+[3m Manual page sinfo(1) line 57 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Don't convert units from their original type (e.g.  2048M  won't[m
+[3m Manual page sinfo(1) line 59 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              be converted to 2G).[m
+[3m Manual page sinfo(1) line 60 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 61 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m-N[0m, [1m--Node[0m[m
+[3m Manual page sinfo(1) line 62 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Print  information  in  a node-oriented format with one line per[m
+[3m Manual page sinfo(1) line 64 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              node and partition. That is, if a node belongs to more than  one[m
+[3m Manual page sinfo(1) line 65 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              partition,  then  one  line for each node-partition pair will be[m
+[3m Manual page sinfo(1) line 66 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              shown.  If [1m--partition[0m is also specified, then only one line per[m
+[3m Manual page sinfo(1) line 67 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              node in this partition is shown.  The default is to print infor‐[m
+[3m Manual page sinfo(1) line 69 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              mation in a partition-oriented format.  This is ignored  if  the[m
+[3m Manual page sinfo(1) line 70 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m--format[0m option is specified.[m
+[3m Manual page sinfo(1) line 71 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 72 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K       [1m-o[0m [1m<output_format>[0m, [1m--format=<output_format>[0m[m
+[3m Manual page sinfo(1) line 73 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Specify  the  information  to be displayed using an [1msinfo[0m format[m
+[3m Manual page sinfo(1) line 74 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              string.  If the command is executed in a federated cluster envi‐[m
+[3m Manual page sinfo(1) line 76 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              ronment  and  information  about  more than one cluster is to be[m
+[3m Manual page sinfo(1) line 77 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              displayed and the [1m-h,[0m [1m--noheader[0m option is used, then the  clus‐[m
+[3m Manual page sinfo(1) line 78 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              ter  name  will  be  displayed before the default output formats[m
+[3m Manual page sinfo(1) line 79 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              shown below.  Format strings transparently used  by  [1msinfo[0m  when[m
+[3m Manual page sinfo(1) line 80 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              running with various options are:[m
+[3m Manual page sinfo(1) line 81 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 82 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [4mdefault[24m        "%#P %.5a %.10l %.6D %.6t %N"[m
+[3m Manual page sinfo(1) line 84 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 85 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [4m--summarize[24m    "%#P %.5a %.10l %.16F  %N"[m
+[3m Manual page sinfo(1) line 86 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 87 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [4m--long[24m         "%#P  %.5a %.10l %.10s %.4r %.8h %.10g %.6D %.11T[m
+[3m Manual page sinfo(1) line 89 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                             %N"[m
+[3m Manual page sinfo(1) line 90 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 91 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [4m--Node[24m         "%#N %.6D %#P %6t"[m
+[3m Manual page sinfo(1) line 92 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 93 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [4m--long[24m [4m--Node[24m  "%#N %.6D %#P %.11T %.4c %.8z %.6m %.8d %.6w %.8f[m
+[3m Manual page sinfo(1) line 94 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                             %20E"[m
+[3m Manual page sinfo(1) line 95 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 96 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [4m--list-reasons[24m "%20E %9u %19H %N"[m
+[3m Manual page sinfo(1) line 97 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 99 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [4m--long[24m [4m--list-reasons[24m[m
+[3m Manual page sinfo(1) line 100 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                             "%20E %12U %19H %6t %N"[m
+[3m Manual page sinfo(1) line 101 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 102 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              In the above format strings, the use of "#" represents the maxi‐[m
+[3m Manual page sinfo(1) line 103 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              mum length of any partition name or node list to be printed.   A[m
+[3m Manual page sinfo(1) line 104 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              pass  is  made  over  the records to be printed to establish the[m
+[3m Manual page sinfo(1) line 105 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              size in order to align the sinfo output, then a second  pass  is[m
+[3m Manual page sinfo(1) line 106 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              made  over  the  records  to  print them.  Note that the literal[m
+[3m Manual page sinfo(1) line 107 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              character "#" itself is not a valid field length  specification,[m
+[3m Manual page sinfo(1) line 108 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              but is only used to document this behaviour.[m
+[3m Manual page sinfo(1) line 109 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 110 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              The format of each field is "%[[.]size]type[suffix]"[m
+[3m Manual page sinfo(1) line 111 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 112 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                 [4msize[24m   Minimum  field size. If no size is specified, whatever[m
+[3m Manual page sinfo(1) line 113 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                        is needed to print the information will be used.[m
+[3m Manual page sinfo(1) line 114 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 115 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                 [4m.[24m      Indicates the output should  be  right  justified  and[m
+[3m Manual page sinfo(1) line 116 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                        size  must  be  specified.   By default output is left[m
+[3m Manual page sinfo(1) line 117 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                        justified.[m
+[3m Manual page sinfo(1) line 118 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 119 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                 [4msuffix[24m Arbitrary string to append to the end of the field.[m
+[3m Manual page sinfo(1) line 120 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 121 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              Valid [4mtype[24m specifications include:[m
+[3m Manual page sinfo(1) line 122 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 123 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%all[0m  Print all fields available for this data type with a  ver‐[m
+[3m Manual page sinfo(1) line 124 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    tical bar separating each field.[m
+[3m Manual page sinfo(1) line 126 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 127 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%a[0m    State/availability of a partition.[m
+[3m Manual page sinfo(1) line 128 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 129 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%A[0m    Number  of  nodes by state in the format "allocated/idle".[m
+[3m Manual page sinfo(1) line 130 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    Do not use this with a node state option ("%t" or "%T") or[m
+[3m Manual page sinfo(1) line 131 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    the  different  node  states  will  be  placed on separate[m
+[3m Manual page sinfo(1) line 132 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    lines.[m
+[3m Manual page sinfo(1) line 133 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 135 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%b[0m    Features currently active on the nodes, also see [1m%f[0m.[m
+[3m Manual page sinfo(1) line 136 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 137 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%B[0m    The max number of CPUs per node available to jobs  in  the[m
+[3m Manual page sinfo(1) line 138 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    partition.[m
+[3m Manual page sinfo(1) line 139 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 140 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%c[0m    Number of CPUs per node.[m
+[3m Manual page sinfo(1) line 141 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 142 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%C[0m    Number   of   CPUs   by   state   in   the  format  "allo‐[m
+[3m Manual page sinfo(1) line 143 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    cated/idle/other/total". Do not use this with a node state[m
+[3m Manual page sinfo(1) line 144 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    option ("%t" or "%T") or the different node states will be[m
+[3m Manual page sinfo(1) line 145 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    placed on separate lines.[m
+[3m Manual page sinfo(1) line 147 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 148 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%d[0m    Size of temporary disk space per node in megabytes.[m
+[3m Manual page sinfo(1) line 149 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 150 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%D[0m    Number of nodes.[m
+[3m Manual page sinfo(1) line 151 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 152 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%e[0m    Free memory of a node.[m
+[3m Manual page sinfo(1) line 153 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 154 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%E[0m    The reason a node is unavailable (down, drained, or drain‐[m
+[3m Manual page sinfo(1) line 155 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    ing states).[m
+[3m Manual page sinfo(1) line 156 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 157 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%f[0m    Features available the nodes, also see [1m%b[0m.[m
+[3m Manual page sinfo(1) line 158 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 159 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%F[0m    Number   of   nodes   by   state   in  the  format  "allo‐[m
+[3m Manual page sinfo(1) line 160 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    cated/idle/other/total".  Note  the  use  of  this  format[m
+[3m Manual page sinfo(1) line 161 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    option with a node state format option ("%t" or "%T") will[m
+[3m Manual page sinfo(1) line 162 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    result in the different node states being be  reported  on[m
+[3m Manual page sinfo(1) line 163 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    separate lines.[m
+[3m Manual page sinfo(1) line 164 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 165 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%g[0m    Groups which may use the nodes.[m
+[3m Manual page sinfo(1) line 166 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 167 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%G[0m    Generic resources (gres) associated with the nodes.[m
+[3m Manual page sinfo(1) line 168 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 169 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%h[0m    Print the OverSubscribe setting for the partition.[m
+[3m Manual page sinfo(1) line 170 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 171 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%H[0m    Print the timestamp of the reason a node is unavailable.[m
+[3m Manual page sinfo(1) line 172 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 173 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%I[0m    Partition job priority weighting factor.[m
+[3m Manual page sinfo(1) line 174 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 175 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%l[0m    Maximum  time  for  any job in the format "days-hours:min‐[m
+[3m Manual page sinfo(1) line 176 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    utes:seconds"[m
+[3m Manual page sinfo(1) line 177 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 178 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K              [1m%L[0m    Default time for any job in  the  format  "days-hours:min‐[m
+[3m Manual page sinfo(1) line 179 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K                    utes:seconds"[m
+[3m Manual page sinfo(1) line 180 (press h for help or q to quit)[23m[K[K [KESCESC[KOO[KBB[K[m
+[3m Manual page sinfo(1) line 181 (press h for help or q to quit)[23m[K[K[?1l>[?1049lktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sinfo
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+win          up 7-00:00:00      1   idle wg01
+hep          up 7-00:00:00      1 drain* au209
+hep          up 7-00:00:00     23   idle au[193-208,210-216]
+lunarc       up 7-00:00:00      2   idle au[217-218]
+gpu          up 7-00:00:00      4    mix ag[01,03,05-06]
+gpu          up 7-00:00:00      2   idle ag[02,04]
+gpu2         up 7-00:00:00      2  down* ag[07-08]
+gpuk20       up 7-00:00:00      2 drain* eg[05-06]
+gpuk20       up 7-00:00:00      2   idle eg[07-08]
+lu*          up 7-00:00:00      2 drain* au[055,111]
+lu*          up 7-00:00:00      3  drain au[041,054,152]
+lu*          up 7-00:00:00      8   resv ln[06-10],mn[12-14]
+lu*          up 7-00:00:00     37    mix au[001,012,025,033,036,049,053,056,065,089,097,099,113,115,120-121,142-145,156,161,166,176,180,221,225,290-292,294-298],ln01,mn11
+lu*          up 7-00:00:00    207  alloc au[002-011,013-018,020,022-024,026-032,034-035,037-040,042-048,050-052,057-064,066-088,090-096,098,100-110,112,114,116-119,122-141,146-151,153-155,157-160,162-165,167-175,177-179,181-192,219-220,222-224,226-238,293,299-304],ln[02-05],mn[01-10,15-22]
+lu*          up 7-00:00:00      2   idle au[019,021]
+lu2          up 7-00:00:00     21  down* au[323-343]
+lu2          up 7-00:00:00      1  drain au322
+lvis         up 1-12:00:00      2 drain* eg[05-06]
+lvis         up 1-12:00:00      1  alloc eg21
+lvis         up 1-12:00:00      9   idle eg[01-04,07-08,22-24]
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ sinfoman sinfo[3@$? [C[C[C[C[C[C[C[C[C[Kcat slurm-6061868.out$?[K man sinfo[3P[C[C[C[C[C[C[C[C[C[4Psinfo[Kclear
+[H[Jktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ ls
+homework4-slurm.sh  slurm-6061868.out  slurm-6061903.out  slurm-6061907.out
+slurm-6061865.out   slurm-6061869.out  slurm-6061904.out  slurm-6061908.out
+slurm-6061866.out   slurm-6061870.out  slurm-6061905.out  [0m[38;5;34mTanvirhomework4.sh[0m
+slurm-6061867.out   slurm-6061871.out  slurm-6061906.out
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ squeue -u tanvir27
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ squeue -u tanvir27[K[K[K[K[K[K[K[K
+squeue: option requires an argument -- 'u'
+Try "squeue --help" for more information
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ squeue -u [K[K[K
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6060695       gpu    sim12   alemas  R 2-01:07:10      1 ag06
+           6061353       gpu sim_pg_g   alemas  R   20:49:50      1 ag03
+           6061464       gpu sim_pg_g   alemas  R   19:03:44      1 ag01
+           6061757       gpu PlmV-Nep  sbhakat  R    5:52:01      1 ag05
+           6061756       gpu  PlmV-MD  sbhakat  R    6:16:31      1 ag05
+           6061174       gpu PlmV-MD2  sbhakat  R 1-06:21:27      1 ag01
+           6058756        lu guess_ap    nitin PD       0:00      1 (DependencyNeverSatisfied)
+           6061892        lu 20farm_h mohanraj PD       0:00      1 (Priority)
+           6061890        lu 18farm_h mohanraj PD       0:00      1 (Priority)
+           6061891        lu 19farm_h mohanraj PD       0:00      1 (Priority)
+           6061888        lu 16farm_h mohanraj PD       0:00      1 (Priority)
+           6061889        lu 17farm_h mohanraj PD       0:00      1 (Priority)
+           6061883        lu 11farm_h mohanraj PD       0:00      1 (Resources)
+           6061884        lu 12farm_h mohanraj PD       0:00      1 (Priority)
+           6061885        lu 13farm_h mohanraj PD       0:00      1 (Priority)
+           6061886        lu 14farm_h mohanraj PD       0:00      1 (Priority)
+           6061887        lu 15farm_h mohanraj PD       0:00      1 (Priority)
+           6061901        lu 29farm_h mohanraj PD       0:00      1 (Priority)
+           6061898        lu 26farm_h mohanraj PD       0:00      1 (Priority)
+           6061899        lu 27farm_h mohanraj PD       0:00      1 (Priority)
+           6061900        lu 28farm_h mohanraj PD       0:00      1 (Priority)
+           6061895        lu 23farm_h mohanraj PD       0:00      1 (Priority)
+           6061896        lu 24farm_h mohanraj PD       0:00      1 (Priority)
+           6061897        lu 25farm_h mohanraj PD       0:00      1 (Priority)
+           6061893        lu 21farm_h mohanraj PD       0:00      1 (Priority)
+           6061894        lu 22farm_h mohanraj PD       0:00      1 (Priority)
+           6061902        lu 30farm_h mohanraj PD       0:00      1 (Priority)
+           6061432        lu pp_globa    jnord PD       0:00      1 (Dependency)
+           6061431        lu bm_globa    jnord PD       0:00      1 (Dependency)
+           6061423        lu pp_crop_    jnord PD       0:00      1 (Dependency)
+           6061422        lu bm_crop_    jnord PD       0:00      1 (Dependency)
+           6061381        lu pp_globa    jnord PD       0:00      1 (Dependency)
+           6061380        lu bm_globa    jnord PD       0:00      1 (Dependency)
+           6055222        lu pp_globa    jnord PD       0:00      1 (Dependency)
+           6055221        lu bm_globa    jnord PD       0:00      1 (DependencyNeverSatisfied)
+           6061615        lu     51Cr rotureau PD       0:00     22 (Priority)
+           6058580        lu bm_crop_   alepon PD       0:00      1 (Dependency)
+           6058579        lu bm_crop_   alepon PD       0:00      1 (Dependency)
+           6058575        lu guess_ap   alepon PD       0:00      1 (DependencyNeverSatisfied)
+           6058570        lu guess_ap   alepon PD       0:00      1 (DependencyNeverSatisfied)
+           6058568        lu bm_crop_   alepon PD       0:00      1 (Dependency)
+           6058567        lu bm_crop_   alepon PD       0:00      1 (Dependency)
+           6061739        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061740        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061741        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061742        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061743        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061744        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061738        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061737        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061736        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061735        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061734        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061732        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061733        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061729        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061730        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061731        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061699        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061700        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061701        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061702        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061703        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061704        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061705        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061706        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061707        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061708        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061709        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061710        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061711        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061712        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061713        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061714        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061715        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061716        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061717        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061718        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061719        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061720        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061721        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061722        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061723        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061724        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061725        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061726        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061727        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061728        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061677        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061678        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061679        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061680        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061681        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061682        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061683        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061684        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061685        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061686        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061687        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061688        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061689        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061690        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061691        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061692        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061693        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061694        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061695        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061696        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061697        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061698        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061676        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061675        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061674        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061673        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061672        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061670        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061671        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061667        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061668        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061669        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061645        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061646        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061647        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061648        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061649        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061650        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061651        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061652        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061653        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061654        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061655        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061656        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061657        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061658        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061659        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061660        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061661        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061662        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061663        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061664        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061665        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061666        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061644        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061643        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061642        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061641        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061640        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061638        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061639        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061635        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061636        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061637        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061634        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061633        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061632        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061631        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061630        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061628        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061629        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061625        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061626        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061627        lu submissi    zhaor PD       0:00      1 (Priority)
+           6061859        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061860        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061861        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061862        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061858        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061842        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061843        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061844        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061845        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061846        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061847        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061848        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061849        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061850        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061851        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061852        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061853        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061854        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061855        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061856        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061857        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061841        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061840        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061839        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061838        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061837        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061836        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061835        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061834        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061833        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061832        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061831        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061830        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061829        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061828        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061827        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061826        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061825        lu Hfbtho_r    ljung PD       0:00      1 (Priority)
+           6061824        lu Hfbtho_r    ljung PD       0:00      1 (Resources)
+           6061580        lu run.runo     vivy  R   12:12:31      1 au012
+           6061010        lu    solar travegre  R 1-19:45:22      1 au014
+           6059175        lu    tewub      jan  R 4-19:46:37      1 au053
+           6059206        lu    gawub      jan  R 4-19:28:34      1 au097
+           6059208        lu    gawub      jan  R 4-19:28:34      1 au097
+           6059202        lu    tewub      jan  R 4-19:30:34      1 au065
+           6059200        lu    tewub      jan  R 4-19:32:35      1 au065
+           6059201        lu    tewub      jan  R 4-19:32:35      1 au065
+           6059194        lu    tewub      jan  R 4-19:34:35      1 au003
+           6059195        lu    tewub      jan  R 4-19:34:35      1 au003
+           6059193        lu    tewub      jan  R 4-19:36:35      1 au003
+           6059186        lu    tewub      jan  R 4-19:42:36      1 au003
+           6059122        lu    tewub      jan  R 4-19:48:37      1 au003
+           6059121        lu    tewub      jan  R 4-19:50:38      1 au003
+           6061880        lu 8farm_he mohanraj  R       6:06      1 ln01
+           6061881        lu 9farm_he mohanraj  R       6:06      1 ln01
+           6061882        lu 10farm_h mohanraj  R       6:06      1 ln01
+           6061877        lu 5farm_he mohanraj  R       6:09      1 au294
+           6061878        lu 6farm_he mohanraj  R       6:09      1 au297
+           6061879        lu 7farm_he mohanraj  R       6:09      1 au298
+           6061874        lu 2farm_he mohanraj  R       6:12      1 au143
+           6061875        lu 3farm_he mohanraj  R       6:12      1 au144
+           6061876        lu 4farm_he mohanraj  R       6:12      1 au292
+           6061873        lu 1farm_he mohanraj  R       6:15      1 au142
+           6061349        lu     PEG3  makambi  R   21:07:32      1 au089
+           6061347        lu     PEG2  makambi  R   21:13:33      1 au089
+           6061340        lu     PEG1  makambi  R   21:23:34      1 au089
+           6061806        lu molcas03  meiyuan  R    1:48:47      1 au065
+           6061807        lu molcas03  meiyuan  R    1:48:47      1 au065
+           6061808        lu molcas03  meiyuan  R    1:48:47      1 au065
+           6061809        lu molcas03  meiyuan  R    1:48:47      1 au065
+           6061793        lu molcas03  meiyuan  R    2:11:00      1 au032
+           6061792        lu molcas03  meiyuan  R    2:25:08      1 au032
+           6061261        lu orca_run ringelbs  R    9:58:56      1 au024
+           6061262        lu orca_run ringelbs  R    9:58:56      1 au101
+           6061474        lu   adchem  nucpont  R   16:02:17      1 au148
+           6061452        lu FeCabCN1   linnea  R    9:58:56      1 au112
+           6061453        lu FeCabCN1   linnea  R    9:58:56      1 au124
+           6061473        lu   adchem  nucpont  R   18:00:47      1 au126
+           6060208        lu ultimate   pirani  R 3-17:11:34      1 au130
+           6060209        lu ultimate   pirani  R 3-17:11:34      1 au130
+           6060203        lu ultimate   pirani  R 3-17:22:59      1 au238
+           6060204        lu ultimate   pirani  R 3-17:22:59      1 au238
+           6060205        lu ultimate   pirani  R 3-17:22:59      1 au238
+           6060206        lu ultimate   pirani  R 3-17:22:59      1 au238
+           6060207        lu ultimate   pirani  R 3-17:22:59      1 au238
+           6060212        lu ultimate   pirani  R 3-17:11:34      1 au130
+           6060198        lu ultimate   pirani  R 3-17:33:35      1 au131
+           6060199        lu ultimate   pirani  R 3-17:33:35      1 au131
+           6060200        lu ultimate   pirani  R 3-17:33:35      1 au131
+           6060201        lu ultimate   pirani  R 3-17:33:35      1 au131
+           6060202        lu ultimate   pirani  R 3-17:33:35      1 au131
+           6060193        lu ultimate   pirani  R 3-18:12:06      1 au002
+           6060194        lu ultimate   pirani  R 3-18:12:06      1 au002
+           6060195        lu ultimate   pirani  R 3-18:12:06      1 au002
+           6060196        lu ultimate   pirani  R 3-18:12:06      1 au002
+           6060197        lu ultimate   pirani  R 3-18:12:06      1 au002
+           6060192        lu ultimate   pirani  R 3-18:23:32      1 au292
+           6060191        lu ultimate   pirani  R 3-18:23:37      1 au080
+           6060190        lu ultimate   pirani  R 3-18:23:41      1 au080
+           6060189        lu ultimate   pirani  R 3-18:23:46      1 au080
+           6060188        lu ultimate   pirani  R 3-18:23:53      1 au080
+           6060187        lu ultimate   pirani  R 3-18:23:58      1 au080
+           6060186        lu ultimate   pirani  R 3-18:24:06      1 au079
+           6060185        lu ultimate   pirani  R 3-18:24:10      1 au079
+           6060184        lu ultimate   pirani  R 3-18:24:16      1 au053
+           6060183        lu ultimate   pirani  R 3-18:26:33      1 au079
+           6060182        lu ultimate   pirani  R 3-18:26:37      1 au079
+           6060181        lu ultimate   pirani  R 3-18:26:41      1 au079
+           6060180        lu ultimate   pirani  R 3-18:26:46      1 au076
+           6060179        lu ultimate   pirani  R 3-18:26:50      1 au076
+           6060178        lu ultimate   pirani  R 3-18:26:55      1 au076
+           6060177        lu ultimate   pirani  R 3-18:26:58      1 au076
+           6060176        lu ultimate   pirani  R 3-18:27:02      1 au076
+           6060175        lu ultimate   pirani  R 3-18:27:06      1 au075
+           6060174        lu ultimate   pirani  R 3-18:27:10      1 au075
+           6060173        lu ultimate   pirani  R 3-18:27:19      1 au075
+           6060172        lu ultimate   pirani  R 3-18:28:58      1 au075
+           6060171        lu ultimate   pirani  R 3-18:29:02      1 au075
+           6060170        lu ultimate   pirani  R 3-18:29:08      1 au074
+           6060169        lu ultimate   pirani  R 3-18:29:12      1 au074
+           6060168        lu ultimate   pirani  R 3-18:29:16      1 au074
+           6060167        lu ultimate   pirani  R 3-18:29:20      1 au074
+           6060166        lu ultimate   pirani  R 3-18:29:23      1 au074
+           6060165        lu ultimate   pirani  R 3-18:29:28      1 au097
+           6060164        lu ultimate   pirani  R 3-18:29:32      1 au073
+           6060163        lu ultimate   pirani  R 3-18:29:36      1 au073
+           6060162        lu ultimate   pirani  R 3-18:29:40      1 au073
+           6060161        lu ultimate   pirani  R 3-18:29:47      1 au073
+           6060160        lu ultimate   pirani  R 3-18:31:22      1 au073
+           6060159        lu ultimate   pirani  R 3-18:31:27      1 au072
+           6060158        lu ultimate   pirani  R 3-18:31:32      1 au072
+           6060157        lu ultimate   pirani  R 3-18:31:35      1 au072
+           6060156        lu ultimate   pirani  R 3-18:31:40      1 au072
+           6060155        lu ultimate   pirani  R 3-18:31:45      1 au072
+           6060154        lu ultimate   pirani  R 3-18:31:48      1 au071
+           6060153        lu ultimate   pirani  R 3-18:31:52      1 au071
+           6060152        lu ultimate   pirani  R 3-18:31:58      1 au071
+           6060151        lu ultimate   pirani  R 3-18:32:03      1 au071
+           6060150        lu ultimate   pirani  R 3-18:32:10      1 au071
+           6060149        lu ultimate   pirani  R 3-18:32:21      1 au070
+           6060148        lu ultimate   pirani  R 3-18:32:28      1 au070
+           6060147        lu ultimate   pirani  R 3-18:33:23      1 au070
+           6060146        lu ultimate   pirani  R 3-18:33:27      1 au070
+           6060145        lu ultimate   pirani  R 3-18:33:31      1 au070
+           6060144        lu ultimate   pirani  R 3-18:33:36      1 au069
+           6060143        lu ultimate   pirani  R 3-18:33:40      1 au069
+           6060142        lu ultimate   pirani  R 3-18:33:45      1 au069
+           6060141        lu ultimate   pirani  R 3-18:33:49      1 au069
+           6060140        lu ultimate   pirani  R 3-18:33:52      1 au069
+           6060139        lu ultimate   pirani  R 3-18:33:56      1 au040
+           6060138        lu ultimate   pirani  R 3-18:34:00      1 au040
+           6060137        lu ultimate   pirani  R 3-18:34:07      1 au040
+           6060136        lu ultimate   pirani  R 3-18:34:15      1 au040
+           6060134        lu ultimate   pirani  R 3-18:36:29      1 au292
+           6059003        lu ultimate   pirani  R 4-21:40:47      1 au003
+           6058979        lu ultimate   pirani  R 4-22:34:51      1 au023
+           6061273        lu     fr02 jnielsen  R   22:59:12      1 au082
+           6061274        lu     fr24 jnielsen  R   22:59:12      1 au224
+           6061275        lu     fr46 jnielsen  R   22:59:12      1 au150
+           6061276        lu     fr68 jnielsen  R   22:59:12      1 au117
+           6061277        lu    fr810 jnielsen  R   22:59:12      1 au181
+           6061278        lu   fr1015 jnielsen  R   22:59:12      1 au157
+           6058566        lu bm_crop_   alepon  R 5-20:48:10      3 au[102,104,106]
+           6060799        lu    RA5M7   friale  R 1-22:34:25      1 au043
+           6060801        lu    RA7M7   friale  R 1-22:34:25      1 au147
+           6058578        lu bm_crop_   alepon  R 5-20:44:10      3 au[007,015,128]
+           6061288        lu   RA5Por   friale  R   21:53:40      1 au228
+           6060749        lu     Film  nseom19  R 1-08:17:48      1 au078
+           6060607        lu firstTes    jakbe  R 2-19:33:25      1 mn11
+           6060118        lu ultimate   pirani  R 3-21:14:51      1 au191
+           6060119        lu ultimate   pirani  R 3-21:14:51      1 au191
+           6060120        lu ultimate   pirani  R 3-21:14:51      1 au191
+           6060121        lu ultimate   pirani  R 3-21:14:51      1 au191
+           6060112        lu ultimate   pirani  R 3-21:18:42      1 au226
+           6060113        lu ultimate   pirani  R 3-21:18:42      1 au226
+           6060114        lu ultimate   pirani  R 3-21:18:42      1 au226
+           6060115        lu ultimate   pirani  R 3-21:18:42      1 au226
+           6060116        lu ultimate   pirani  R 3-21:18:42      1 au226
+           6060117        lu ultimate   pirani  R 3-21:18:42      1 ln01
+           6060104        lu ultimate   pirani  R 3-21:26:10      1 au297
+           6060107        lu ultimate   pirani  R 3-21:24:10      1 au158
+           6060105        lu ultimate   pirani  R 3-21:26:10      1 au298
+           6060106        lu ultimate   pirani  R 3-21:26:10      1 au298
+           6060135        lu ultimate   pirani  R 3-18:34:55      1 au040
+           6060133        lu ultimate   pirani  R 3-18:36:42      1 au291
+           6060132        lu ultimate   pirani  R 3-18:37:19      1 au291
+           6060131        lu ultimate   pirani  R 3-18:37:24      1 au290
+           6060130        lu ultimate   pirani  R 3-18:37:29      1 au290
+           6060129        lu ultimate   pirani  R 3-18:37:32      1 au191
+           6060128        lu ultimate   pirani  R 3-18:37:35      1 au095
+           6060127        lu ultimate   pirani  R 3-18:37:38      1 au095
+           6060126        lu ultimate   pirani  R 3-18:37:44      1 au095
+           6060125        lu ultimate   pirani  R 3-18:37:56      1 au095
+           6060124        lu ultimate   pirani  R 3-18:38:13      1 au095
+           6060123        lu ultimate   pirani  R 3-18:38:35      1 au053
+           6060122        lu ultimate   pirani  R 3-18:39:37      1 au053
+           6060108        lu ultimate   pirani  R 3-21:24:10      1 au158
+           6060109        lu ultimate   pirani  R 3-21:24:10      1 au158
+           6060110        lu ultimate   pirani  R 3-21:24:10      1 au158
+           6060111        lu ultimate   pirani  R 3-21:24:10      1 au158
+           6060096        lu ultimate   pirani  R 3-21:28:11      1 au236
+           6060097        lu ultimate   pirani  R 3-21:28:11      1 au236
+           6060098        lu ultimate   pirani  R 3-21:28:11      1 au236
+           6060099        lu ultimate   pirani  R 3-21:28:11      1 au294
+           6060100        lu ultimate   pirani  R 3-21:28:11      1 au294
+           6060101        lu ultimate   pirani  R 3-21:28:11      1 au295
+           6060102        lu ultimate   pirani  R 3-21:28:11      1 au295
+           6060103        lu ultimate   pirani  R 3-21:28:11      1 au297
+           6060087        lu ultimate   pirani  R 3-21:30:11      1 au227
+           6060088        lu ultimate   pirani  R 3-21:30:11      1 au003
+           6060089        lu ultimate   pirani  R 3-21:30:11      1 au003
+           6060090        lu ultimate   pirani  R 3-21:30:11      1 au036
+           6060091        lu ultimate   pirani  R 3-21:30:11      1 au113
+           6060092        lu ultimate   pirani  R 3-21:30:11      1 au113
+           6060093        lu ultimate   pirani  R 3-21:30:11      1 au166
+           6060094        lu ultimate   pirani  R 3-21:30:11      1 au236
+           6060095        lu ultimate   pirani  R 3-21:30:11      1 au236
+           6060082        lu ultimate   pirani  R 3-21:32:11      1 au033
+           6060083        lu ultimate   pirani  R 3-21:32:11      1 au097
+           6060084        lu ultimate   pirani  R 3-21:32:11      1 au176
+           6060085        lu ultimate   pirani  R 3-21:32:11      1 au180
+           6060086        lu ultimate   pirani  R 3-21:32:11      1 au180
+           6061099        lu segundo-     iria  R 1-10:13:50      1 au099
+           6061177        lu NEB-fe-c     iria  R 1-01:39:44      1 au115
+           6061872        lu Stackzhc   torsew  R       6:43      3 au[139-141]
+           6060830        lu    W_002  danmarc  R 1-20:56:24      1 au230
+           6061791        lu Attr500_   trulle  R    2:39:17      1 au003
+           6057605        lu triplet-     iria  R 6-16:36:31      1 au180
+           6061379        lu bm_globa    jnord  R   13:47:45      4 au[045,149,164,220]
+           6061421        lu bm_crop_    jnord  R   14:41:57      5 au[066,087,160,167,237]
+           6060802        lu Attr5_ra   trulle  R 1-23:36:23      1 au001
+           6060747        lu Attr50_r   trulle  R 1-23:46:23      1 au023
+           6060694        lu Attr500_   trulle  R 2-01:06:24      1 au065
+           6060817        lu Attr0.05   trulle  R 1-23:28:23      1 au290
+           6060814        lu Attr0.5_   trulle  R 1-23:30:23      1 au166
+           6060815        lu Attr0.05   trulle  R 1-23:30:23      1 au166
+           6060816        lu Attr0.05   trulle  R 1-23:30:23      1 au166
+           6060811        lu Attr0.5_   trulle  R 1-23:32:23      1 au166
+           6060812        lu Attr0.5_   trulle  R 1-23:32:23      1 au166
+           6060810        lu Attr0.5_   trulle  R 1-23:34:23      1 au036
+           6060803        lu Attr5_ra   trulle  R 1-23:36:23      1 au001
+           6060809        lu Attr0.5_   trulle  R 1-23:36:23      1 au025
+           6060754        lu Attr500_   trulle  R 1-23:42:23      1 au023
+           6060776        lu Attr5_ra   trulle  R 1-23:42:23      1 au023
+           6060777        lu Attr5_ra   trulle  R 1-23:42:23      1 au023
+           6060753        lu Attr500_   trulle  R 1-23:44:23      1 au023
+           6060746        lu Attr50_r   trulle  R 1-23:48:23      1 au023
+           6060736        lu Attr50_r   trulle  R 1-23:54:23      1 au023
+           6060739        lu Attr50_r   trulle  R 1-23:54:23      1 au023
+           6060717        lu Attr500_   trulle  R 2-00:02:24      1 au023
+           6060716        lu Attr500_   trulle  R 2-00:04:24      1 au023
+           6060710        lu Attr0.05   trulle  R 2-00:18:24      1 au023
+           6060709        lu Attr0.05   trulle  R 2-00:32:24      1 au023
+           6060705        lu Attr0.5_   trulle  R 2-00:50:24      1 au023
+           6060702        lu Attr5_ra   trulle  R 2-00:54:24      1 au089
+           6060703        lu Attr15_r   trulle  R 2-00:54:24      1 au023
+           6060701        lu Attr5_ra   trulle  R 2-00:56:24      1 au089
+           6060700        lu Attr50_r   trulle  R 2-01:00:24      1 au003
+           6060698        lu Attr50_r   trulle  R 2-01:02:24      1 au065
+           6060696        lu Attr500_   trulle  R 2-01:06:24      1 au065
+           6060879        lu Attr50_r   trulle  R 1-22:46:20      1 au221
+           6060844        lu Attr50_r   trulle  R 1-23:16:22      1 au036
+           6060880        lu Attr50_r   trulle  R 1-22:46:20      1 au221
+           6060878        lu Attr50_r   trulle  R 1-22:48:20      1 au221
+           6060877        lu Attr50_r   trulle  R 1-22:50:20      1 au221
+           6060872        lu Attr500_   trulle  R 1-22:58:21      1 au180
+           6060873        lu Attr500_   trulle  R 1-22:58:21      1 au221
+           6060870        lu Attr500_   trulle  R 1-23:00:21      1 au176
+           6060871        lu Attr500_   trulle  R 1-23:00:21      1 au176
+           6060867        lu Attr0.05   trulle  R 1-23:02:21      1 au053
+           6060869        lu Attr0.05   trulle  R 1-23:02:21      1 au053
+           6060862        lu Attr0.5_   trulle  R 1-23:04:21      1 au023
+           6060864        lu Attr0.05   trulle  R 1-23:04:21      1 au023
+           6060865        lu Attr0.05   trulle  R 1-23:04:21      1 au130
+           6060860        lu Attr5_ra   trulle  R 1-23:06:22      1 au049
+           6060852        lu Attr0.5_   trulle  R 1-23:08:22      1 au130
+           6060853        lu Attr0.5_   trulle  R 1-23:08:22      1 au130
+           6060856        lu Attr0.5_   trulle  R 1-23:08:22      1 au130
+           6060849        lu Attr5_ra   trulle  R 1-23:10:22      1 au036
+           6060850        lu Attr5_ra   trulle  R 1-23:10:22      1 au049
+           6060848        lu Attr5_ra   trulle  R 1-23:12:22      1 au036
+           6060847        lu Attr50_r   trulle  R 1-23:14:22      1 au036
+           6060837        lu Attr50_r   trulle  R 1-23:18:23      1 au036
+           6060843        lu Attr50_r   trulle  R 1-23:18:23      1 au036
+           6060823        lu Attr500_   trulle  R 1-23:20:23      1 au001
+           6060825        lu Attr500_   trulle  R 1-23:20:23      1 au036
+           6060820        lu Attr500_   trulle  R 1-23:24:23      1 au036
+           6060821        lu Attr500_   trulle  R 1-23:24:23      1 au036
+           6061289        lu   B000A5   friale  R   21:05:33      1 au031
+           6061015        lu   RA7Por   friale  R 1-19:45:23      1 au134
+           6060211        lu ultimate   pirani  R 3-17:11:35      1 au130
+           6058982        lu ultimate   pirani  R 4-22:26:52      1 au001
+           6059005        lu ultimate   pirani  R 4-21:38:48      1 au053
+           6059002        lu ultimate   pirani  R 4-21:42:48      1 au033
+           6060831        lu    W_003  danmarc  R 1-19:45:23      1 au093
+           6060832        lu    W_004  danmarc  R 1-19:45:23      1 au017
+           6060833        lu    W_005  danmarc  R 1-19:45:23      1 au114
+           6060834        lu    W_006  danmarc  R 1-19:45:23      1 au135
+           6060835        lu    W_007  danmarc  R 1-19:45:23      1 au094
+           6060838        lu    W_008  danmarc  R 1-19:45:23      1 au096
+           6060839        lu    W_009  danmarc  R 1-19:45:23      1 au162
+           6060840        lu    W_010  danmarc  R 1-19:45:23      1 au170
+           6060841        lu    W_011  danmarc  R 1-19:45:23      1 au018
+           6060842        lu    W_012  danmarc  R 1-19:45:23      1 au020
+           6060829        lu    W_001  danmarc  R 1-21:16:13      1 au132
+           6057642        lu ultimate   pirani  R 6-12:41:33      1 au120
+           6057645        lu ultimate   pirani  R 6-12:33:31      1 au176
+           6057644        lu ultimate   pirani  R 6-12:37:32      1 au120
+           6057639        lu ultimate   pirani  R 6-13:41:43      1 au065
+           6057637        lu ultimate   pirani  R 6-13:45:43      1 au033
+           6057606        lu triplet-     iria  R 6-16:08:18      1 au166
+           6061430        lu bm_globa    jnord  R   12:53:35      4 au[105,127,151,223]
+           6061189        lu Attr5_ra   trulle  R 1-01:32:38      1 au065
+           6061188        lu Attr5_ra   trulle  R 1-01:32:58      1 au065
+           6061187        lu Attr5_ra   trulle  R 1-01:33:25      1 au065
+           6061186        lu Attr5_ra   trulle  R 1-01:33:57      1 au065
+           6061185        lu Attr0.5_   trulle  R 1-01:34:56      1 au036
+           6061184        lu Attr0.5_   trulle  R 1-01:35:18      1 au036
+           6061183        lu Attr0.5_   trulle  R 1-01:35:41      1 au036
+           6061182        lu Attr0.5_   trulle  R 1-01:36:10      1 au036
+           6061181        lu Attr0.05   trulle  R 1-01:36:41      1 au036
+           6061180        lu Attr0.05   trulle  R 1-01:37:00      1 au025
+           6061179        lu Attr0.05   trulle  R 1-01:37:50      1 au025
+           6061178        lu Attr0.05   trulle  R 1-01:38:15      1 au001
+           6061571        lu Attr500_   trulle  R   13:25:41      1 au065
+           6060854        lu       R2    sonia  R    7:45:19      1 au022
+           6060846        lu       R2    sonia  R    8:03:34      1 au100
+           6060836        lu       R2    sonia  R    8:50:13      1 au077
+           6059096        lu s_dft_po eko12vas  R 3-19:21:55      1 au108
+           6059097        lu s_dft_po eko12vas  R 3-19:21:55      1 au222
+           6061166        lu run_4.sh     jocr  R    7:31:07      1 au056
+           6061165        lu run_3.sh     jocr  R    7:33:09      1 au121
+           6061167        lu run_5.sh     jocr  R    7:31:07      1 au161
+           6059095        lu s_dft_po eko12vas  R 3-19:31:56      1 au234
+           6061164        lu run_2.sh     jocr  R    7:45:19      1 au032
+           6059094        lu s_dft_po eko12vas  R 3-19:45:57      1 au168
+           6059093        lu s_dft_po eko12vas  R 3-19:51:58      1 au098
+           6059092        lu s_dft_po eko12vas  R 3-19:53:58      1 au235
+           6059091        lu s_dft_po eko12vas  R 3-19:55:58      1 au110
+           6058975        lu LL37-R_2     mona  R 3-18:36:01      2 au[067-068]
+           6058976        lu LL37-R_3     mona  R 3-18:36:01      2 au[037-038]
+           6058977        lu LL37-R_4     mona  R 3-18:36:01      2 au[084-085]
+           6058978        lu LL37-R_5     mona  R 3-18:36:01      2 au[088,090]
+           6058974        lu LL37-R_1     mona  R 3-18:53:13      2 au[083,179]
+           6059088        lu s_dft_po eko12vas  R 3-21:46:13      1 au063
+           6059089        lu s_dft_po eko12vas  R 3-21:46:13      1 au189
+           6059090        lu s_dft_po eko12vas  R 3-21:46:13      1 au190
+           6059086        lu s_dft_po eko12vas  R 3-21:48:14      1 au155
+           6059087        lu s_dft_po eko12vas  R 3-21:48:14      1 au233
+           6059085        lu s_dft_po eko12vas  R 3-22:12:17      1 au146
+           6059083        lu s_dft_po eko12vas  R 3-22:34:20      1 au109
+           6059084        lu s_dft_po eko12vas  R 3-22:34:20      1 au171
+           6060800        lu       R1    sonia  R   22:36:20      1 au092
+           6060813        lu Sub-Para    annar  R   22:36:20      1 au125
+           6059082        lu s_dft_po eko12vas  R 3-23:52:30      1 au174
+           6059081        lu s_dft_po eko12vas  R 3-23:54:30      1 au232
+           6059080        lu s_dft_po eko12vas  R 4-00:26:35      1 au219
+           6061163        lu run_1.sh     jocr  R   12:51:35      1 au012
+           6059078        lu s_dft_po eko12vas  R 4-03:49:34      1 au107
+           6059079        lu s_dft_po eko12vas  R 4-03:49:34      1 au175
+           6061317        lu Sub-Para    annar  R    4:50:25      1 au129
+           6061318        lu Sub-Para    annar  R    4:50:25      1 au177
+           6061320        lu Sub-Para    annar  R    4:50:25      1 au178
+           6061321        lu Sub-Para    annar  R    4:50:25      1 au182
+           6061324        lu Sub-Para    annar  R    4:50:25      1 au183
+           6061325        lu Sub-Para    annar  R    4:50:25      1 au034
+           6061326        lu Sub-Para    annar  R    4:50:25      1 au039
+           6061327        lu Sub-Para    annar  R    4:50:25      1 au044
+           6061328        lu Sub-Para    annar  R    4:50:25      1 au046
+           6061329        lu Sub-Para    annar  R    4:50:25      1 au047
+           6061330        lu Sub-Para    annar  R    4:50:25      1 au048
+           6061331        lu Sub-Para    annar  R    4:50:25      1 au133
+           6061332        lu Sub-Para    annar  R    4:50:25      1 au136
+           6061333        lu Sub-Para    annar  R    4:50:25      1 au137
+           6061813        lu triplet-     iria  R    1:08:24      1 au049
+           6061451        lu NEB-fe-c     iria  R   19:51:17      1 au227
+           6061079        lu fe-champ     iria  R 1-16:23:36      1 au225
+           6061316        lu Sub-Para    annar  R    6:29:39      1 au060
+           6061308        lu Sub-Para    annar  R    7:27:04      1 au192
+           6061309        lu Sub-Para    annar  R    7:27:04      1 au008
+           6061310        lu Sub-Para    annar  R    7:27:04      1 au011
+           6061311        lu Sub-Para    annar  R    7:27:04      1 au016
+           6061008        lu fe-3-cha     iria  R 1-21:10:12      1 au295
+           6061620        lu     51Cr rotureau  R    2:42:53     16 mn[01-02,05-10,15-22]
+           6057317        lu LL37-K_5     mona  R 6-06:14:35      2 au[229,231]
+           6057316        lu LL37-K_4     mona  R 6-06:26:36      2 au[009,118]
+           6057315        lu LL37-K_3     mona  R 6-06:30:36      2 au[010,061]
+           6057314        lu LL37-K_2     mona  R 6-06:32:36      2 au[006,035]
+           6057313        lu LL37-K_1     mona  R 6-06:38:37      2 au[013,153]
+           6061285        lu fe-3-cha     iria  R   22:33:44      1 au296
+           6061594        lu submissi    zhaor  R       9:49      1 au030
+           6061593        lu submissi    zhaor  R      34:03      1 au187
+           6059077        lu s_dft_po eko12vas  R 4-17:00:16      1 au042
+           6059075        lu s_dft_po eko12vas  R 4-17:05:39      1 au303
+           6059076        lu s_dft_po eko12vas  R 4-17:05:39      1 au304
+           6059074        lu s_dft_po eko12vas  R 4-17:06:09      1 au302
+           6059069        lu s_dft_po eko12vas  R 4-17:07:37      1 au301
+           6059070        lu s_dft_po eko12vas  R 4-17:07:37      1 ln02
+           6059071        lu s_dft_po eko12vas  R 4-17:07:37      1 ln03
+           6059072        lu s_dft_po eko12vas  R 4-17:07:37      1 ln04
+           6059073        lu s_dft_po eko12vas  R 4-17:07:37      1 ln05
+           6059067        lu s_dft_po eko12vas  R 4-17:08:04      1 au299
+           6059068        lu s_dft_po eko12vas  R 4-17:08:04      1 au300
+           6059065        lu s_dft_po eko12vas  R 4-17:08:05      1 au138
+           6059066        lu s_dft_po eko12vas  R 4-17:08:05      1 au293
+           6061805        lu     opt4  ericand  R    1:54:53      5 au[103,116,119,172-173]
+           6061588        lu submissi    zhaor  R    2:33:14      1 au163
+           6061587        lu submissi    zhaor  R    2:41:19      1 au188
+           6061592        lu submissi    zhaor  R    2:29:12      1 au154
+           6061591        lu submissi    zhaor  R    2:33:14      1 au165
+           6061584        lu submissi    zhaor  R    3:07:37      1 au050
+           6061585        lu submissi    zhaor  R    3:07:37      1 au057
+           6060665        lu    ss-s1  ericand  R 2-02:47:54      6 au[081,086,091,184-186]
+           6060664        lu    ss-s0  ericand  R 2-02:48:30      6 au[004-005,026-029]
+           6060663        lu    ss-ra  ericand  R 2-02:49:21      6 au[051-052,058-059,062,064]
+           6061063        lu q_h-tran marlisah  R 1-14:01:19      1 au097
+           6061581        lu submissi    zhaor  R    3:46:02      1 au122
+           6061583        lu submissi    zhaor  R    3:46:02      1 au123
+           6060603        lu       R1    sonia  R 2-15:02:36      1 au169
+           6060601        lu       R1    sonia  R 2-17:40:39      1 au159
+           6061061        lu q_h-tran marlisah  R 1-17:21:43      1 au145
+           6061011        lu q_oh-dis marlisah  R 1-20:26:08      1 au113
+           6061012        lu q_h2o2-d marlisah  R 1-20:26:08      1 au156
+           6059199        lu q_reacta marlisah  R 4-19:32:36      1 au025
+           6061487        lu q_reacta marlisah  R   17:52:46      1 au291
+           6061478        lu q_reacta marlisah  R   18:00:49      1 au290
+           6058998        lu        q marlisah  R 4-22:06:51      1 au001
+           6059001        lu        q marlisah  R 4-22:00:51      1 au001
+           6061521        lu        q marlisah  R   17:18:38      1 au025
+           6061342        lu        q marlisah  R   21:19:36      1 au225
+           6061746        lu   hw.exe rotureau  R    9:30:06      1 mn04
+           6061745        lu   hw.exe rotureau  R    9:31:10      1 mn03
+           6061863      lvis     lhpc  perivar  R      26:31      1 eg21
+ktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ clear
+[H[Jktanvir27@aurora-rviz02:~/Homework4\[tanvir27@aurora-rviz02 Homework4]$ exit
+exit

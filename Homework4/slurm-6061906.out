@@ -1,0 +1,15 @@
+user:
+tanvir27
+current directory:
+/home/tanvir27/Homework4
+hostname:
+au001
+uptime info:
+ 10:27:32 up 13 days, 21:06,  0 users,  load average: 10.00, 10.03, 10.29
+disk space usage:
+22K	.
+No of entries in /etc: 
+310
+No of entries in /usr/bin directories
+1694
+slurmstepd: error: *** JOB 6061906 ON au001 CANCELLED AT 2021-10-06T10:28:19 ***
