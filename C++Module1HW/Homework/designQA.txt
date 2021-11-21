@@ -1,0 +1,21 @@
+Author "Tanvir Sayed"
+Answers to the Design Questions for my class "Nucleus"
+
+1.
+The nucleus can be represented by the number of protons and neutrons it has.
+This (representation of proton and neutron) can be stored as a vector (of integers) or string. 
+
+2.
+The number of protons and neutrons can basically be used for most things (or at least an approximation) about the nucleus. These can include the radius, the mass, the mass number, stabilty, decays, ....
+Nuclei which can be commonly identified by Symbols or Names might be a bit challenging to identify on first sight by just looking at numbers. But, if the proton numbers can be linked to a vector containing the symbols (with a bit of effort), its not going to be a problem.
+Storing the representation as a vector might be helpful for some manipulation of the class objects or use in other functions, where a String will be best for just 'displaying nuclei'.
+
+3. 
+The proton and neutron numbers should obviously not be negative. The radius, mass, stability and Q values relating to a specific nucleus should not change. The user should not be able to change these once an object for a specific nucleus is defined. 
+
+4.
+Member functions for the radius, mass number, atomic number, stability would be useful to have for the class object to have properties of and act as a nucleus.
+
+#PS. Not sure if I understood all the questions right but these are what came to mind while answering.   
+
+  
